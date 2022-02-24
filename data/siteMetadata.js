@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Code With Rob',
   author: 'Robert Turner',
   headerTitle: 'Code With Rob',
-  description: 'My personal blog and project site',
+  description: 'My personal blog',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://codewithrob.dev',
