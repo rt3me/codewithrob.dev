@@ -1,16 +1,14 @@
 ---
-name: Tails Azimuth
-avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+name: Robert Turner
+avatar: /static/images/robert-turner.jpg
+occupation: Full Stack Developer
+company: Self-Employed
+email: hello@codewithrob.dev
+twitter: https://twitter.com/rt3me
+linkedin: https://www.linkedin.com/in/rt3me
+github: https://github.com/rt3me
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+I am a full stack web developer. I am self-employed, working on a freelance and contract basis primarily working with React, Next.js and Node.js. My other web development experience includes Drupal, WordPress, and Shopify.
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+If you have projects or opportunities you would like to discuss I would love to hear from you.
