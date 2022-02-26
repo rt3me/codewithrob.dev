@@ -1,0 +1,50 @@
+---
+title: Create a new branch in git
+date: '2022-2-26'
+tags: ['git', 'devops']
+draft: false
+summary: 'Various methods of creating a new branch in git'
+authors: ['default']
+---
+
+## Introduction
+
+Let's consider some different methods of creating a new branch locally in git.
+
+## The default
+
+Simply using "git branch" and the name of the branch will create a branch based on the currently checked out branch.
+
+```
+git branch <new-branch>
+```
+
+## Based on an existing branch
+
+What if you want to create a branch based on some existing branch other than the currently checked out branch?
+
+```
+git branch <new-branch> <base-branch>
+```
+
+## Based on a commit or tag
+
+What about creating a new branch based on a specific commit number?
+
+```
+git branch <new-branch> <commit-number>
+```
+
+What about creating a new branch based on a specific tag?
+
+```
+git branch <new-branch> v2.26.22
+```
+
+## Push new branch to remote repository
+
+After working on your local branch, how do you push it to a remote repository?
+
+```
+git push -u origin <local-branch>
+```
