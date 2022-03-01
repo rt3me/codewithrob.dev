@@ -1,0 +1,60 @@
+---
+title: Change default git branch to main
+date: '2022-2-28'
+tags: ['git', 'devops']
+draft: false
+summary: 'How to change the default branch of a git repository to main (from master)'
+authors: ['default']
+---
+
+## Introduction
+
+You probably have created a new git repository with a default branch of main before. When working with an existing repository with a default branch of master, how do you safely change the default branch to main?
+
+## Create 'main' branch from 'master'
+
+First, create a branch called 'main' with all the commit history from 'master' by using the -m argument.
+
+```
+git branch -m master main
+```
+
+## Push 'main' to remote
+
+If you are working with a local repository that is a clone of a remote repository, you should push the new branch you created to the remote repository. This command also causes the local branch to track the remote branch of the same name.
+
+```
+git push -u origin main
+```
+
+## Point HEAD to new branch
+
+HEAD is a pointer to the current branch reference, so you have to point HEAD to your new 'main' branch before removing the 'master' branch.
+
+```
+git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
+```
+
+Confirm your changes took effect:
+
+```
+git branch -a
+```
+
+## Change default branch on remote repository
+
+Again, this assumes you are working with a repository that is a clone of a remote repository. In this example, we will assume your remote is on GitHub. Before deleting the 'master' branch in GitHub you must change the default branch to some other branch. On https://github.com, navigate to your remote repository. Then click Settings -> Branches and change the default branch to 'main'.
+
+GitHub instructions are available at: [https://docs.github.com/en/github/administering-a-repository/setting-the-default-branch](https://docs.github.com/en/github/administering-a-repository/setting-the-default-branch).
+
+## Delete 'master' branch on remote
+
+```
+git push origin --delete master
+```
+
+Confirm your changes took effect:
+
+```
+git branch -a
+```
