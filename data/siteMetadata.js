@@ -8,7 +8,7 @@ const siteMetadata = {
   siteUrl: 'https://codewithrob.dev',
   siteRepo: 'https://github.com/rt3me/nextjs-tailwind-blog',
   siteLogo: '/static/images/code-with-rob-logo-mark.svg',
-  image: '/static/images/robert-turner.png',
+  image: '/static/images/rob-turner.jpg',
   socialBanner: '/static/images/code-with-rob-twitter-card.png',
   email: 'hello@codewithrob.dev',
   github: 'https://github.com/rt3me',

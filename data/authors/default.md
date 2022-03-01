@@ -1,6 +1,6 @@
 ---
 name: Robert Turner
-avatar: /static/images/robert-turner.jpg
+avatar: /static/images/rob-turner.jpg
 occupation: Full Stack Developer
 company: Self-Employed
 email: hello@codewithrob.dev
