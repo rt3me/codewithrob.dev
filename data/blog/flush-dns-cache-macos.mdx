@@ -1,0 +1,68 @@
+---
+title: How to Flush DNS Cache in macOS
+date: '2022-3-2'
+tags: ['macOS', 'DNS', 'cache', 'devops']
+draft: false
+summary: 'You can try flushing the DNS cache in macOS when you need to make sure your local DNS is pointing correctly.'
+authors: ['default']
+---
+
+## Introduction
+
+If a domain is not pointing correctly in macOS you can try flushing the DNS cache. DNS can be cached, or saved at different points including your local machine, your local network equipment, your internet service provider, etc. When cached DNS information is being used to resolve domains to IP addresses, the latest DNS information may not be accessed, which could cause a domain to point to an old IP address. Flushing, or clearing, the DNS cache can help to resolve this issue.
+
+## Open terminal
+
+**With Spotlight:** Click the Spotlight search button or press Command+space to search. Type 'Terminal' in Spotlight search. Double-click Terminal when it appears in the search.
+
+**With Finder:** In Finder, navigate to Go > Utilities or click Applications > Utilities and double-click Terminal.
+
+## Enter command
+
+When Terminal opens, enter the appropriate command for your version of macOS:
+
+**Big Sur and later:**
+
+```
+sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+```
+
+**El Capitan:**
+
+```
+sudo killall -HUP mDNSResponder
+```
+
+**Yosemite:**
+
+```
+sudo discoveryutil udnsflushcaches
+```
+
+**Mountain Lion and Mavericks:**
+
+```
+sudo killall -HUP mDNSResponder
+```
+
+**Snow Leopard:**
+
+```
+sudo dscacheutil –flushcache
+```
+
+**Leopard:**
+
+```
+sudo lookupd –flushcache
+```
+
+**Tiger:**
+
+```
+use lookupd –flushcache
+```
+
+## Sudo Password
+
+Enter your macOS account password and press Enter to flush your DNS cache.
