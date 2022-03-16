@@ -1,0 +1,80 @@
+---
+title: Creating a new git repository
+date: '2022-3-15'
+tags: ['git', 'devops']
+draft: false
+summary: 'How to create a new local git repository and push it to GitHub'
+authors: ['default']
+---
+
+## Introduction
+
+There are various methods of creating a new git repository and connecting it to a remote repository. Let's explore creating a new git repository, in this example creating the repository locally and then pushing it to GitHub.
+
+## Create the local repository
+
+Start by creating a new directory, named appropriately, then cd into the directory.
+
+```
+mkdir <new-repository-name>
+```
+
+```
+cd <new-repository-name>
+```
+
+Once in the newly created directory, initialize the new repository with the command 'git init'.
+
+```
+git init
+```
+
+Create a 'README.md' file for the new repository.
+
+```
+echo '# New Repository Name' >> README.md
+```
+
+Add your README.md file to the repository and perform an initial commit.
+
+```
+git add README.md
+git commit -m "First commit"
+```
+
+Finally, set the default branch to main, if that is your preference.
+
+```
+git branch -M main
+```
+
+## Create the remote repository
+
+- Log in to your account on https://github.com or create an account if you do not have one.
+- Navigate to https://github.com and on the left side of the page click the 'New' button.
+- Set the repository name with no spaces, using dashes in the place of spaces if you choose.
+- Adding a description is optional, but recommended.
+- Be sure not to select 'Add a README file' because this will avoid complications.
+- Click the 'Create repository' button.
+
+## Push the local repository to the remote
+
+After you create the repository on GitHub, the empty repository page will open.
+
+In the section entitled '…or create a new repository on the command line', copy the command that appears like below. Note that your command will be different from the below due to having your repository name in the url.
+
+```
+git remote add origin git@github.com:rt3me/new-repository-name.git
+```
+
+Paste that command into the terminal window where you created the git repository and hit enter to run the command.
+
+This will add your GitHub repository as a remote in your local repository, connecting the two.
+
+Finally, push the local repository to the remote.
+
+```
+git push -u origin main
+```
+
+If you refresh the repository page on https://github.com you should now see that your changes have been pushed to GitHub.
