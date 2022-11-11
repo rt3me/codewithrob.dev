@@ -16,6 +16,14 @@ const projectsData = [
     href: '/blog/project-howard-wangs-restaurants',
   },
   {
+    title: `NICHD`,
+    description: `A new responsive Drupal theme was created to migrate the main NICHD website from
+    Bootstrap 3 to Boostrap 5. New twig templates were created with updated utility classes as well
+    as custom JavaScript, jQuery, and PHP scripts.`,
+    imgSrc: '/static/images/project-nichd.jpg',
+    href: '/blog/project-nichd',
+  },
+  {
     title: 'Flip Flop Surf Shop',
     description: `A full stack React application built on the MERN stack with e-commerce powered
     by the Stripe API. This site was created as a final project for Nucamp Coding Bootcamp's full
